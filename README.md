@@ -68,11 +68,12 @@ Ever downloaded a video course (Udemy, Coursera, etc.) and wanted to quickly sea
    ```powershell
    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 Method 2: Clone Repository
-bashgit clone https://github.com/devsgh-cloudsec/video-course-transcript-organizer.git
-cd video-course-transcript-organizer
+git clone https://github.com/devsgh-cloudsec/video-subtitle-processor.git
+cd video-subtitle-processor
 🚀 Usage
 Step 1: Prepare Your Course Folder
 Organize your course like this:
+
 📂 Your-Course-Folder/
 ├── 📂 01 - Introduction/
 │   ├── 📄 01 - Welcome.vtt
@@ -86,17 +87,19 @@ Option A: Right-click Method
 
 Right-click Process-Subtitles.ps1
 Select "Run with PowerShell"
-
 Option B: PowerShell Command
-powershell# Navigate to your course folder
+
+# Navigate to your course folder
 cd "E:\Courses\Your-Course-Folder"
 
 # Run the script
 .\Process-Subtitles.ps1
 Step 3: View Results
 The script will automatically open the Subtitles folder containing your processed files.
+
 📊 Output Structure
 After processing, you'll get:
+
 📂 Your-Course-Folder/
 ├── 📂 01 - Introduction/
 │   ├── 📄 01 - Welcome.vtt
@@ -138,35 +141,34 @@ First, we need to install the required software...
 --------------------------------------------------
 🔍 How to Use the Results
 1. Search Entire Course
-
 Open 00-COMBINED-ALL.txt
 Use Ctrl + F to search for any topic
 Find specific concepts across all lectures instantly
-
 2. Individual Lecture Study
-
 Browse individual .txt files in the Subtitles folder
 Clean, readable format perfect for note-taking
 Copy content to your preferred study app
-
 3. Import to Note-Taking Apps
-
 Obsidian: Import as markdown files
 Notion: Copy content into database
 OneNote: Paste organized sections
 Anki: Create flashcards from content
-
 🔧 Troubleshooting
 Common Issues
-IssueSolution"Execution Policy" errorRun: Set-ExecutionPolicy -Scope CurrentUser RemoteSignedNo files foundEnsure .vtt or .srt files exist in course folderSpecial characters errorSave script file as UTF-8 encodingPermission deniedRun PowerShell as Administrator
+Issue	Solution
+"Execution Policy" error	Run: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+No files found	Ensure .vtt or .srt files exist in course folder
+Special characters error	Save script file as UTF-8 encoding
+Permission denied	Run PowerShell as Administrator
 Script Output Meanings
-MessageMeaning✅ SUCCESSFile processed and cleaned successfully⚠️ WARNINGFile found but no content after cleaning❌ ERRORFile couldn't be processed (check file corruption)
+Message	Meaning
+✅ SUCCESS	File processed and cleaned successfully
+⚠️ WARNING	File found but no content after cleaning
+❌ ERROR	File couldn't be processed (check file corruption)
 Performance Tips
-
 Large courses (500+ files): Script may take 2-5 minutes
 Network drives: Copy to local drive first for faster processing
 Antivirus: Exclude the script folder if scanning slows down processing
-
 🤝 Contributing
 Contributions are welcome! Here's how you can help:
 
@@ -175,23 +177,19 @@ Create a feature branch (git checkout -b feature/AmazingFeature)
 Commit your changes (git commit -m 'Add some AmazingFeature')
 Push to the branch (git push origin feature/AmazingFeature)
 Open a Pull Request
-
 Ideas for Contributions
-
 🌐 Support for additional subtitle formats
 🎨 GUI version using Windows Forms
 🔄 Batch processing multiple course folders
 📱 Cross-platform support (Linux/macOS)
 🎯 Integration with popular note-taking apps
-
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
-🙏 Acknowledgments
 
+🙏 Acknowledgments
 Thanks to all video course creators who provide subtitle files
 Inspired by the need for better course content organization
 Built for students and professionals who love learning efficiently
-
 📞 Support
 If you find this tool helpful, please:
 
@@ -199,8 +197,6 @@ If you find this tool helpful, please:
 🍴 Fork it for your own modifications
 🐛 Report issues you encounter
 💡 Suggest new features
-
-
 Made with ❤️ for lifelong learners
 
 "The beautiful thing about learning is that no one can take it away from you." - B.B. King
