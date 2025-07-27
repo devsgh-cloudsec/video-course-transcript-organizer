@@ -59,10 +59,10 @@ Ever downloaded a video course (Udemy, Coursera, etc.) and wanted to quickly sea
 
 ### Method 1: Download Script
 
-1. **Download** the script file:
-   ```powershell
-   # Save the script as 'Process-Subtitles.ps1' in your course folder
-   ```
+1. **Download the PowerShell script directly:**
+   - Right-click this link: [Process-Subtitles.ps1](https://raw.githubusercontent.com/devsgh-cloudsec/video-course-transcript-organizer/main/Process-Subtitles.ps1)
+   - Select "Save link as..." or "Save target as..."
+   - Save as `Process-Subtitles.ps1` in your course root folder
 
 2. **Enable script execution** (if needed):
    ```powershell
@@ -72,8 +72,8 @@ Ever downloaded a video course (Udemy, Coursera, etc.) and wanted to quickly sea
 ### Method 2: Clone Repository
 
 ```bash
-git clone https://github.com/devsgh-cloudsec/video-subtitle-processor.git
-cd video-subtitle-processor
+git clone https://github.com/devsgh-cloudsec/video-course-transcript-organizer.git
+cd video-course-transcript-organizer
 ```
 
 ## 🚀 Usage
@@ -204,36 +204,13 @@ First, we need to install the required software...
 - **Network drives**: Copy to local drive first for faster processing
 - **Antivirus**: Exclude the script folder if scanning slows down processing
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
-
-### Ideas for Contributions
-
-- 🌐 Support for additional subtitle formats
-- 🎨 GUI version using Windows Forms
-- 🔄 Batch processing multiple course folders
-- 📱 Cross-platform support (Linux/macOS)
-- 🎯 Integration with popular note-taking apps
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## 🙏 Acknowledgments & 📞 Support
 
 - Thanks to all video course creators who provide subtitle files
-- Inspired by the need for better course content organization
-- Built for students and professionals who love learning efficiently
-
-## 📞 Support
-
 If you find this tool helpful, please:
 - ⭐ **Star** this repository
 - 🍴 **Fork** it for your own modifications
