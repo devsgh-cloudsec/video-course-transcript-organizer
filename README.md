@@ -59,14 +59,14 @@ Ever downloaded a video course (Udemy, Coursera, etc.) and wanted to quickly sea
 
 ### Method 1: Download Script
 
-1. **Download** the script file:
+1. **Download the PowerShell script directly:**
+   - Right-click this link: [Process-Subtitles.ps1](https://raw.githubusercontent.com/devsgh-cloudsec/video-course-transcript-organizer/main/Process-Subtitles.ps1)
+   - Select "Save link as..." or "Save target as..."
+   - Save as `Process-Subtitles.ps1` in your course folder
+
+2. **Enable script execution** (if needed):
    ```powershell
-   # Save the script as 'Process-Subtitles.ps1' in your course folder
-
-Enable script execution (if needed):
-powershellSet-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-
-
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 Method 2: Clone Repository
 bashgit clone https://github.com/devsgh-cloudsec/video-course-transcript-organizer.git
 cd video-course-transcript-organizer
