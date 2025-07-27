@@ -1,4 +1,4 @@
-# Video Course Transcript Organizer
+# Video Subtitle Processor - Extract & Organize Course Transcripts
 
 > **Automatically extract, clean, and organize subtitles from video courses into searchable text files**
 
@@ -59,21 +59,29 @@ Ever downloaded a video course (Udemy, Coursera, etc.) and wanted to quickly sea
 
 ### Method 1: Download Script
 
-1. **Download the PowerShell script directly:**
-   - Right-click this link: [Process-Subtitles.ps1](https://raw.githubusercontent.com/devsgh-cloudsec/video-course-transcript-organizer/main/Process-Subtitles.ps1)
-   - Select "Save link as..." or "Save target as..."
-   - Save as `Process-Subtitles.ps1` in your course folder
+1. **Download** the script file:
+   ```powershell
+   # Save the script as 'Process-Subtitles.ps1' in your course folder
+   ```
 
 2. **Enable script execution** (if needed):
    ```powershell
    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-Method 2: Clone Repository
+   ```
+
+### Method 2: Clone Repository
+
+```bash
 git clone https://github.com/devsgh-cloudsec/video-subtitle-processor.git
 cd video-subtitle-processor
-🚀 Usage
-Step 1: Prepare Your Course Folder
-Organize your course like this:
+```
 
+## 🚀 Usage
+
+### Step 1: Prepare Your Course Folder
+
+Organize your course like this:
+```
 📂 Your-Course-Folder/
 ├── 📂 01 - Introduction/
 │   ├── 📄 01 - Welcome.vtt
@@ -82,24 +90,32 @@ Organize your course like this:
 │   ├── 📄 01 - Setup.srt
 │   └── 📄 02 - Configuration.srt
 └── 📄 Process-Subtitles.ps1  ← Place script here
-Step 2: Run the Script
-Option A: Right-click Method
+```
 
-Right-click Process-Subtitles.ps1
-Select "Run with PowerShell"
-Option B: PowerShell Command
+### Step 2: Run the Script
 
+**Option A: Right-click Method**
+1. Right-click `Process-Subtitles.ps1`
+2. Select **"Run with PowerShell"**
+
+**Option B: PowerShell Command**
+```powershell
 # Navigate to your course folder
 cd "E:\Courses\Your-Course-Folder"
 
 # Run the script
 .\Process-Subtitles.ps1
-Step 3: View Results
-The script will automatically open the Subtitles folder containing your processed files.
+```
 
-📊 Output Structure
+### Step 3: View Results
+
+The script will automatically open the `Subtitles` folder containing your processed files.
+
+## 📊 Output Structure
+
 After processing, you'll get:
 
+```
 📂 Your-Course-Folder/
 ├── 📂 01 - Introduction/
 │   ├── 📄 01 - Welcome.vtt
@@ -113,7 +129,11 @@ After processing, you'll get:
     ├── 📄 01 - Setup.txt
     ├── 📄 02 - Configuration.txt
     └── 📄 00-COMBINED-ALL.txt       ← Master searchable file
-Sample Combined Output
+```
+
+### Sample Combined Output
+
+```
 COMBINED COURSE SUBTITLES
 Generated on: 2025-07-27 16:04:03
 Total files processed: 45
@@ -139,64 +159,89 @@ SECTION: 02 - Getting Started
 === 01 - Setup ===
 First, we need to install the required software...
 --------------------------------------------------
-🔍 How to Use the Results
-1. Search Entire Course
-Open 00-COMBINED-ALL.txt
-Use Ctrl + F to search for any topic
-Find specific concepts across all lectures instantly
-2. Individual Lecture Study
-Browse individual .txt files in the Subtitles folder
-Clean, readable format perfect for note-taking
-Copy content to your preferred study app
-3. Import to Note-Taking Apps
-Obsidian: Import as markdown files
-Notion: Copy content into database
-OneNote: Paste organized sections
-Anki: Create flashcards from content
-🔧 Troubleshooting
-Common Issues
-Issue	Solution
-"Execution Policy" error	Run: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-No files found	Ensure .vtt or .srt files exist in course folder
-Special characters error	Save script file as UTF-8 encoding
-Permission denied	Run PowerShell as Administrator
-Script Output Meanings
-Message	Meaning
-✅ SUCCESS	File processed and cleaned successfully
-⚠️ WARNING	File found but no content after cleaning
-❌ ERROR	File couldn't be processed (check file corruption)
-Performance Tips
-Large courses (500+ files): Script may take 2-5 minutes
-Network drives: Copy to local drive first for faster processing
-Antivirus: Exclude the script folder if scanning slows down processing
-🤝 Contributing
+```
+
+## 🔍 How to Use the Results
+
+### 1. **Search Entire Course**
+- Open `00-COMBINED-ALL.txt`
+- Use `Ctrl + F` to search for any topic
+- Find specific concepts across all lectures instantly
+
+### 2. **Individual Lecture Study**
+- Browse individual `.txt` files in the `Subtitles` folder
+- Clean, readable format perfect for note-taking
+- Copy content to your preferred study app
+
+### 3. **Import to Note-Taking Apps**
+- **Obsidian**: Import as markdown files
+- **Notion**: Copy content into database
+- **OneNote**: Paste organized sections
+- **Anki**: Create flashcards from content
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+| Issue | Solution |
+|-------|----------|
+| **"Execution Policy"** error | Run: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
+| **No files found** | Ensure `.vtt` or `.srt` files exist in course folder |
+| **Special characters** error | Save script file as **UTF-8** encoding |
+| **Permission denied** | Run PowerShell as Administrator |
+
+### Script Output Meanings
+
+| Message | Meaning |
+|---------|---------|
+| ✅ **SUCCESS** | File processed and cleaned successfully |
+| ⚠️ **WARNING** | File found but no content after cleaning |
+| ❌ **ERROR** | File couldn't be processed (check file corruption) |
+
+### Performance Tips
+
+- **Large courses (500+ files)**: Script may take 2-5 minutes
+- **Network drives**: Copy to local drive first for faster processing
+- **Antivirus**: Exclude the script folder if scanning slows down processing
+
+## 🤝 Contributing
+
 Contributions are welcome! Here's how you can help:
 
-Fork the repository
-Create a feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
-Ideas for Contributions
-🌐 Support for additional subtitle formats
-🎨 GUI version using Windows Forms
-🔄 Batch processing multiple course folders
-📱 Cross-platform support (Linux/macOS)
-🎯 Integration with popular note-taking apps
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. **Open** a Pull Request
 
-🙏 Acknowledgments
-Thanks to all video course creators who provide subtitle files
-Inspired by the need for better course content organization
-Built for students and professionals who love learning efficiently
-📞 Support
+### Ideas for Contributions
+
+- 🌐 Support for additional subtitle formats
+- 🎨 GUI version using Windows Forms
+- 🔄 Batch processing multiple course folders
+- 📱 Cross-platform support (Linux/macOS)
+- 🎯 Integration with popular note-taking apps
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Thanks to all video course creators who provide subtitle files
+- Inspired by the need for better course content organization
+- Built for students and professionals who love learning efficiently
+
+## 📞 Support
+
 If you find this tool helpful, please:
+- ⭐ **Star** this repository
+- 🍴 **Fork** it for your own modifications
+- 🐛 **Report** issues you encounter
+- 💡 **Suggest** new features
 
-⭐ Star this repository
-🍴 Fork it for your own modifications
-🐛 Report issues you encounter
-💡 Suggest new features
-Made with ❤️ for lifelong learners
+---
 
-"The beautiful thing about learning is that no one can take it away from you." - B.B. King
+**Made with ❤️ for lifelong learners**
+
+> *"The beautiful thing about learning is that no one can take it away from you."* - B.B. King
