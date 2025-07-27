@@ -1,0 +1,33 @@
+# PowerShell
+*.ps1~
+*.tmp
+
+# Test files and examples
+test/
+examples/
+sample-subtitles/
+*.vtt
+*.srt
+
+# Output folders created by the script
+Subtitles/
+Output/
+Transcripts/
+
+# Windows
+Thumbs.db
+desktop.ini
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
